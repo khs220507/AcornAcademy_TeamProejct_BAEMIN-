@@ -1,4 +1,4 @@
-package com.acorn.baemin.Seller;
+package com.acorn.baemin.seller;
 
 
 import java.util.List;
@@ -12,11 +12,11 @@ public class SellerController {
 	@Autowired
 	SellerRepository rep;
 	
-	// еб╧н
+	// О©╫б╧О©╫
 	
 	
 	
-	// аьеб
+	// О©╫О©╫О©╫О©╫
 
 	@GetMapping("/Sellerone")
 	public String selectAll( Model model) {

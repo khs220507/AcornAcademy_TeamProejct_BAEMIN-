@@ -1,4 +1,4 @@
-package com.acorn.baemin.Seller;
+package com.acorn.baemin.store;
 
 
 import java.util.List;
@@ -10,17 +10,17 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public class SellerRepository {
+public class StoreRepository {
 	 	// @Autowired
 	    private SqlSession session;
 	 	
-	    private static String namespace = "com.acorn.SellerMapper.";
+	    private static String namespace = "com.acorn.StoreMapper.";
 	    
-	    public List<SellerDTO> selectAll() throws Exception {
+	    public List<StoreDTO> selectAll() throws Exception {
 	    	System.out.println("good");
 	        return session.selectList(namespace+"selectAll");
 	    }
-	    public SellerDTO select(String id) {
+	    public StoreDTO select(String id) {
 	    	return session.selectOne(namespace+"selectOne",id);
 	    }
 	    
