@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -178,8 +181,7 @@
                         <div><img class="section-cart-menuinfo-img" src="./쉑버거.jpg"></div>
                         <div>
                             <ul>
-                                <li>A내용</li>
-                                <li>B내용</li>
+                                <c:forEach items="${list}" var="item"><li>${item}</li></c:forEach>
                             </ul>
                         </div>
                     </div>

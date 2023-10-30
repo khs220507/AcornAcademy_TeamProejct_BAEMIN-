@@ -23,4 +23,5 @@ public class StoreDTO {
 	String operatingTime;
 	String deliveryArea;
 	int storeStatus;
+
 }
