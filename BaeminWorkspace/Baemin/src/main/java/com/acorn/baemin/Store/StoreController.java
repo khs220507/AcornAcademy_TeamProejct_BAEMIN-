@@ -1,4 +1,4 @@
-package com.acorn.baemin.Seller;
+package com.acorn.baemin.Store;
 
 
 import java.util.List;
@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class StoreController {
 	@Autowired
 	StoreRepository rep;
+	
+	
 	
 
 	@GetMapping("/sellerOne")
