@@ -12,6 +12,11 @@ public class SellerController {
 	@Autowired
 	SellerRepository rep;
 	
+	// ลยนฮ
+	
+	
+	
+	// มุลย
 
 	@GetMapping("/Sellerone")
 	public String selectAll( Model model) {

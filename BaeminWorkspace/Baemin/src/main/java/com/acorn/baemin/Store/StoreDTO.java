@@ -1,4 +1,4 @@
-package com.acorn.baemin.Seller;
+package com.acorn.baemin.Store;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
