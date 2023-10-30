@@ -71,7 +71,7 @@ CREATE TABLE store_tbl (
   deliveryArea VARCHAR(50) NOT NULL,  		-- 배달지역
   storeStatus TINYINT NOT NULL        		-- 가게 상태(0:close, 1:open)
 ) auto_increment = 30001;
-SELECT * from store_tbl;
+
 INSERT INTO store_tbl (storeName, storeCategory, storeImage, storeAddress, storePhone, zzimCount, reviewCount, storeRating, storeDescription, minOrderPrice, deliveryFee, operatingTime, deliveryArea, storeStatus)
 VALUES
   ('Tasty Bites', 'Fast Food', 'tastybites.jpg', '123 Main Street, City, Country', '555-123-4567', 100, 50, 4.2, 'Delicious fast food for everyone.', 15, 3, '10:00 AM - 10:00 PM', 'Local Area', 1),
@@ -196,6 +196,9 @@ VALUES
   (10005, 30002);
 
 
+select * from zzim_tbl;
+
+
 -- 09
 CREATE TABLE review_tbl (
     reviewCode INT AUTO_INCREMENT PRIMARY KEY,
@@ -279,5 +282,10 @@ DROP TABLE seller_tbl;
 DROP TABLE user_tbl;
 
 
+
+
+
 SHOW TABLES;
+
+
 
