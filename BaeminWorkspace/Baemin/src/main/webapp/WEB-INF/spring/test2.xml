@@ -12,6 +12,6 @@
 	 
 	<!--수정해줘야 할부분-->	
 	<context:component-scan base-package="com.acorn.baemin" /> 
-	<context:component-scan base-package="com.acorn.baemin.Seller" /> 
+
 	
 </beans:beans>

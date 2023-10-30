@@ -195,6 +195,7 @@ VALUES
   (10004, 30001),
   (10005, 30002);
 
+
 select * from zzim_tbl;
 
 
@@ -283,6 +284,8 @@ DROP TABLE user_tbl;
 
 
 
+
 SHOW TABLES;
+
 
 

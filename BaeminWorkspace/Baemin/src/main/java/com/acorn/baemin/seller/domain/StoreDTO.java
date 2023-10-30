@@ -1,4 +1,4 @@
-package com.acorn.baemin.store;
+package com.acorn.baemin.seller.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,9 +22,5 @@ public class StoreDTO {
 	int deliveryFee;
 	String operatingTime;
 	String deliveryArea;
-
-	int storeStatus;
-
-
-
+	boolean storeStatus;
 }

@@ -15,5 +15,7 @@ public class MenuDTO {
 	String menuImage;
 	String menuContent;
 	String menuClassification;
+
 	int menuStatus;
+
 }

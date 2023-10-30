@@ -8,7 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.acorn.baemin.seller.domain.SellerDTO;
+
+import com.acorn.baemin.seller.domain.StoreDTO;
 import com.acorn.baemin.seller.repository.SellerRepository;
 @Controller
 public class SellerController {
@@ -23,15 +24,18 @@ public class SellerController {
 
 	@GetMapping("/Sellerone")
 	public String selectAll( Model model) {
-		SellerDTO result  = rep.select("testid");
-		model.addAttribute("test", result);
+
+		StoreDTO result  = rep.select("30001");
+		model.addAttribute("item", result);
 		System.out.println( result);
-		return "Sellerone";
+		return "seller/test2";
 		}
 	
+
 	@GetMapping("/sellerall")
 	public String  main(Model model ) {		
-		List<SellerDTO> result;
+		List<StoreDTO> result;
+
 		try {
 			result = rep.selectAll();
 			
@@ -40,6 +44,13 @@ public class SellerController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "sellerall";
+
+		return "seller/test1";
+	}
+	
+	@GetMapping("/sellerHome")
+	public String sellerHome(){
+		return "seller/seller_home";
+
 	}
 }

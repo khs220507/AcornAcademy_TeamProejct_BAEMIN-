@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class StoreRepository {
+
 	 	// @Autowired
 	    private SqlSession session;
 	 	
@@ -29,12 +30,4 @@ public class StoreRepository {
 	    
 
 }
-
-
-
-
-
-
-
-
 
