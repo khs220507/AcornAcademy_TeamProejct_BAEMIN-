@@ -1,4 +1,4 @@
-package com.acorn.baemin.Store;
+package com.acorn.baemin.seller.controller;
 
 
 import java.util.List;
@@ -7,23 +7,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-@Controller
-public class StoreController {
-	@Autowired
-	StoreRepository rep;
-	
-	
-	
 
-	@GetMapping("/sellerOne")
+import com.acorn.baemin.seller.domain.StoreDTO;
+import com.acorn.baemin.seller.repository.SellerRepository;
+@Controller
+public class SellerController {
+	@Autowired
+	SellerRepository rep;
+	
+	// 태민
+	
+	
+	
+	// 준태
+
+	@GetMapping("/Sellerone")
 	public String selectAll( Model model) {
-		StoreDTO result  = rep.select("testid");
-		model.addAttribute("test", result);
+		StoreDTO result  = rep.select("30001");
+		model.addAttribute("item", result);
 		System.out.println( result);
-		return "sellerOne";
+		return "seller/test2";
 		}
 	
-	@GetMapping("/sellerAll")
+
+	@GetMapping("/sellerall")
 	public String  main(Model model ) {		
 		List<StoreDTO> result;
 		try {
@@ -34,6 +41,12 @@ public class StoreController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "sellerAll";
+		return "seller/test1";
+	}
+	
+	@GetMapping("/sellerHome")
+	public String sellerHome(){
+		return "seller/seller_home";
+		
 	}
 }
