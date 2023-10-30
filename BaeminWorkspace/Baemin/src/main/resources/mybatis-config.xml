@@ -5,6 +5,6 @@
 <configuration>
 	<typeAliases>
 
-
+	<typeAlias alias="UserDTO" type="com.acorn.baemin.user.UserDTO"/>
 	</typeAliases>
 </configuration>
