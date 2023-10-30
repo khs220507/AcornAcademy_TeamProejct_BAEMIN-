@@ -1,4 +1,4 @@
-package com.acorn.baemin.Store;
+package com.acorn.baemin.store;
 
 public class test {
 

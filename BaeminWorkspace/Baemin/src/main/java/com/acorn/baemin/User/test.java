@@ -1,4 +1,4 @@
-package com.acorn.baemin.User;
+package com.acorn.baemin.user;
 
 public class test {
 

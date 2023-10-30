@@ -6,5 +6,7 @@
 	<typeAliases>
 
 
+		<typeAlias alias="CartDTO" type="com.acorn.baemin.home.domain.CartDTO"/>
+
 	</typeAliases>
 </configuration>
