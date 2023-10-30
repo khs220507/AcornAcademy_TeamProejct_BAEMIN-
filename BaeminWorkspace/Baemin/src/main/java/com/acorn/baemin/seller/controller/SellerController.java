@@ -1,4 +1,4 @@
-package com.acorn.baemin.Seller;
+package com.acorn.baemin.seller.controller;
 
 
 import java.util.List;
@@ -7,16 +7,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.acorn.baemin.seller.domain.SellerDTO;
+import com.acorn.baemin.seller.repository.SellerRepository;
 @Controller
 public class SellerController {
 	@Autowired
 	SellerRepository rep;
 	
-	// ÅÂ¹Î
+	// íƒœë¯¼
 	
 	
 	
-	// ÁØÅÂ
+	// ì¤€íƒœ
 
 	@GetMapping("/Sellerone")
 	public String selectAll( Model model) {

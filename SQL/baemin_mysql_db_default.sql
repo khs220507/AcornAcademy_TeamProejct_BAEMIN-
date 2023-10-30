@@ -280,3 +280,4 @@ DROP TABLE user_tbl;
 
 
 SHOW TABLES;
+
