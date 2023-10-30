@@ -195,8 +195,6 @@ VALUES
   (10004, 30001),
   (10005, 30002);
 
-select * from zzim_tbl;
-
 
 -- 09
 CREATE TABLE review_tbl (
@@ -281,8 +279,5 @@ DROP TABLE seller_tbl;
 DROP TABLE user_tbl;
 
 
-
-
 SHOW TABLES;
-
 
