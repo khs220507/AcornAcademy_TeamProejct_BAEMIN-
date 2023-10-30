@@ -279,5 +279,7 @@ DROP TABLE seller_tbl;
 DROP TABLE user_tbl;
 
 
+
 SHOW TABLES;
+
 
