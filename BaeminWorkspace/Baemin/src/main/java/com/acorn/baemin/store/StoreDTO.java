@@ -22,7 +22,6 @@ public class StoreDTO {
 	int deliveryFee;
 	String operatingTime;
 	String deliveryArea;
-
 	int storeStatus;
 
 
