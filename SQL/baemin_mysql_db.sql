@@ -196,6 +196,8 @@ VALUES
   (10005, 30002);
 
 select * from zzim_tbl;
+
+
 -- 09
 CREATE TABLE review_tbl (
     reviewCode INT AUTO_INCREMENT PRIMARY KEY,
@@ -279,5 +281,8 @@ DROP TABLE seller_tbl;
 DROP TABLE user_tbl;
 
 
+
+
 SHOW TABLES;
+
 

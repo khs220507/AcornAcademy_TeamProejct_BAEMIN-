@@ -7,10 +7,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+// 민지
 import com.acorn.baemin.home.domain.OrderDTO;
 import com.acorn.baemin.home.domain.ZzimDTO;
 import com.acorn.baemin.home.repository.OrderRepository;
 import com.acorn.baemin.home.repository.ZzimRepository;
+// 현수
+import com.acorn.baemin.home.domain.CartDTO;
+import com.acorn.baemin.home.service.CartServiceI;
+import com.acorn.baemin.home.service.CartServiceImp;
 
 @Controller
 public class HomeController {
@@ -21,16 +26,24 @@ public class HomeController {
 	@Autowired
 	OrderRepository orderDAO;
 	
-	// 홈
+// 홈
+
+
+
+@Controller
+public class HomeController {
+	
+	
+	@Autowired
+	CartServiceImp Imp;	
+	
+
 	@GetMapping("/home")
 	public String home() {
 		return "home/home";
 	}
-	
-	@GetMapping("/cartList")
-	public String cartList() {
-		return "home/cart_list";
-	}
+  
+  // === 민지 ===
 	
 	// 찜 리스트 화면
 	@GetMapping("/zzim")
@@ -63,6 +76,16 @@ public class HomeController {
 			e.printStackTrace();
 		}
 		return "home/order_list";
+
+	
+	// === 현수 ===
+	
+	@GetMapping("/cartList")
+	public String cartList(Model model) {
+		List<CartDTO> result = Imp.getCartListAll();
+		model.addAttribute("list", result);
+		return "home/cart_list";
+
 	}
 	
 }

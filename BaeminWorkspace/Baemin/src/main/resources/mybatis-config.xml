@@ -8,5 +8,7 @@
 		<typeAlias alias="ZzimDTO" type="com.acorn.baemin.home.domain.ZzimDTO"/>
 		<typeAlias alias="OrderDTO" type="com.acorn.baemin.home.domain.OrderDTO"/>
 
+		<typeAlias alias="CartDTO" type="com.acorn.baemin.home.domain.CartDTO"/>
+
 	</typeAliases>
 </configuration>
