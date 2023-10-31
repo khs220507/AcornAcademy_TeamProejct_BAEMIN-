@@ -17,10 +17,7 @@
 		FROM store_tbl
 		where sellerCode = #{sellerCode}
 	</select>
-<<<<<<< HEAD
-	
-=======
->>>>>>> f880ac08703c011308f9419419520cca3f432121
+
 	<insert id="insertStore" parameterType="StoreDTO">
 		INSERT INTO store_tbl 
 		(sellerCode, storeName, storeCategory, storeImage, storeAddress, storePhone, minOrderPrice, deliveryFee, deliveryArea)

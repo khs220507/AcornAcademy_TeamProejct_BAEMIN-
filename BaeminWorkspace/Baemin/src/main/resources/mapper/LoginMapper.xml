@@ -2,16 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<<<<<<< HEAD
-<mapper namespace="com.acorn.loginMapper">
-=======
+
 <mapper namespace="com.acorn.LoginMapper">
 
     <select id="selectUserById" resultType="UserDTO" parameterType="UserDTO">
         select * from user_tbl where userId = #{userId} and userPw = #{userPw}
     </select> 
 
->>>>>>> f880ac08703c011308f9419419520cca3f432121
 
     <select id="selectAll" resultType="UserDTO">
         select * from user_tbl

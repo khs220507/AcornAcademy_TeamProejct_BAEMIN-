@@ -1,4 +1,4 @@
-package com.acorn.baemin.seller.controller;
+package com.acorn.baemin.sellerhome.controller;
 
 
 import java.util.List;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.acorn.baemin.domain.StoreDTO;
 import com.acorn.baemin.seller.repository.SellerRepository;
 @Controller
-public class SellerController {
+public class SellerHomeController {
 	@Autowired
 	SellerRepository rep;
 	
@@ -44,14 +44,13 @@ public class SellerController {
 		rep.insertStore(Store);
 	}
 	
-<<<<<<< HEAD
+
 	@ResponseBody
 	@RequestMapping( value="/sellerHome/{storeName}" , method=RequestMethod.DELETE)
 	public void delete(@PathVariable String storecode) {
 		rep.delete(storecode);
 	}
-=======
->>>>>>> f880ac08703c011308f9419419520cca3f432121
+
 
 //	@GetMapping("/sellerall")
 //	public String  main(Model model ) {		

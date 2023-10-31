@@ -5,13 +5,30 @@
 
 <mapper namespace="com.acorn.CartMapper">
 
-	<select id="selectStoreNameAll" resultType="CartMenuDTO">
-		SELECT * FROM
-		cart_tbl c
-		LEFT OUTER JOIN menu_tbl s ON c.storeCode = s.storeCode
-		UNION
-		SELECT * FROM cart_tbl c
-		RIGHT OUTER JOIN menu_tbl s ON c.storeCode = s.storeCode;
+	<!-- 고객 id 전달받으면 고객의 장바구니 정보 List로 반환 -->
+
+	<select id="selectCart" resultType="CartDTOTest"
+		parameterType="String">
+		SELECT *
+		FROM cart_tbl
+		where memberId =#{id}
 	</select>
+	
+	<!--  장바구니리스트를 넘기면 해당하는 상품에 대한 상품정보를  List로 반환 함  -->
+	<select id="selectStores" resultType="StoreDTOTest"
+		parameterType="java.util.List">
+      <![CDATA[
+          select *
+          from  store_tbl
+          where storeCode in
+      ]]>
+		<foreach item="item" collection="list" open="(" separator=","
+			close=")">
+			#{item.storeCode}
+		</foreach>
+		order by storeCode desc
+	</select> 
+
+
 
 </mapper>
