@@ -23,7 +23,7 @@ public interface LoginRepositoryI {
 	public boolean loginCustomer(String unputId, String inputPw) throws Exception;
 
 	// 로그인
-	public String login();
+	public String customerlogin();
 
 	// 홈
 	public String home();
@@ -42,6 +42,8 @@ public interface LoginRepositoryI {
 
 	// 내정보수정(고객)
 	public String customerModify();
+
+	UserDTO login(String userId, String userPw);
 
 	
 }

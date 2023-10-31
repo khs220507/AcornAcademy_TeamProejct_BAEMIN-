@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 public class StoreDTO {
 
 	int storeCode;
+	int sellerCode;
 	String storeName;
 	String storeCategory;
 	String storeImage;
@@ -23,6 +24,6 @@ public class StoreDTO {
 	int deliveryFee;
 	String operatingTime;
 	String deliveryArea;
-	boolean storeStatus;
+	int storeStatus;
 	
 }

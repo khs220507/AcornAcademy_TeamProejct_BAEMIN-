@@ -67,9 +67,9 @@ CREATE TABLE store_tbl (
   storeDescription VARCHAR(1000),     		-- 매장소개글
   minOrderPrice INT NOT NULL,        		-- 최소주문금액
   deliveryFee INT NOT NULL,           		-- 배달비
-  operatingTime VARCHAR(50) NOT NULL, 		-- 운영시간
+  operatingTime VARCHAR(50) , 				-- 운영시간
   deliveryArea VARCHAR(50) NOT NULL,  		-- 배달지역
-  storeStatus TINYINT NOT NULL,       		-- 가게 상태(0:close, 1:open)
+  storeStatus TINYINT default 0 ,   -- 가게 상태(0:close, 1:open)
   foreign key (sellerCode) references seller_tbl(sellerCode)
 ) auto_increment = 30001;
 
@@ -79,6 +79,14 @@ INSERT INTO store_tbl (sellerCode, storeName, storeCategory, storeImage, storeAd
 (20003, 'Burger Haven', 'Burgers', 'https://example.com/burgers.jpg', '789 Oak St, Village, Country', '555-333-4444', 35, 15, 4.0, 'Home of the juiciest burgers in the village!', 12, 2, '11:00 AM - 10:00 PM', 'Village Area', 1),
 (20004, 'Tasty Tacos', 'Mexican', 'https://example.com/tacos.jpg', '555 Pine St, County, Country', '555-444-5555', 28, 12, 4.1, 'Savor the flavors of Mexico with our delicious tacos.', 18, 2, '12:00 PM - 9:00 PM', 'County Area', 1),
 (20005, 'Asian Delights', 'Asian', 'https://example.com/asian.jpg', '777 Cedar St, Town, Country', '555-555-6666', 42, 20, 4.3, 'Explore the diverse flavors of Asia at our restaurant.', 25, 3, '10:30 AM - 10:00 PM', 'Town Area', 1);
+
+INSERT INTO store_tbl
+		(sellerCode, storeName, storeCategory, storeImage, storeAddress, storePhone, minOrderPrice, deliveryFee, deliveryArea)
+		VALUES
+		(20001,'test','test','test','test','test',2000,2000,'test');
+ALTER TABLE store_tbl
+MODIFY operatingTime VARCHAR(50),
+MODIFY storeStatus TINYINT default 0;
 
 
 

@@ -10,15 +10,15 @@ public class OrderDTO {
 	int  orderNumber;
 	int userCode;
 	int storeCode;
+	String orderMenuName;
+	int orderMenuNumber;
+	int orderMenuPrice;
+	String orderStoreName;
+	String orderStoreImage;
 	String orderDate;
 	int payType;
 	int orderType;
 	String reqToSeller;
 	String reqToRider;
 	String orderStatus;
-	String orderMenuName;
-	int orderMenuNumber;
-	int orderMenuPrice;
-	String orderStoreName;
-	String orderStoreImage;
 }

@@ -8,8 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import com.acorn.baemin.domain.OrderDTO;
 
-
-
 @Repository
 public class OrderRepository implements InterOrderRepository{
 
@@ -18,6 +16,7 @@ public class OrderRepository implements InterOrderRepository{
 	
 	private static String namespace = "com.acorn.HomeMapper.";
 	
+	@Override
 	public List<OrderDTO> orderSelectAll(int userCode) throws Exception {
     	System.out.println("orderList show");
         return session.selectList(namespace+"orderSelectAll",userCode);
