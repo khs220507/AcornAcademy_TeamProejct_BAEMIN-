@@ -7,10 +7,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.acorn.baemin.domain.AnswerDTO;
+import com.acorn.baemin.domain.ReviewDTO;
+import com.acorn.baemin.domain.StoreDTO;
 
-import com.acorn.baemin.seller.domain.StoreDTO;
-import com.acorn.baemin.store.AnswerDTO;
-import com.acorn.baemin.user.domain.ReviewDTO;
 
 
 
@@ -20,31 +20,37 @@ import com.acorn.baemin.user.domain.ReviewDTO;
 public class SellerRepository implements SellerRepositoryI{
 	    @Autowired
 	    private SqlSession session;
-	    
+
 	    private static String namespace = "com.acorn.SellerMapper.";
 	    private static String namespaceStore = "com.acorn.StoreMapper.";
 	    private static String namespaceReview = "com.acorn.ReviewMapper.";
 	    private static String nameAnswer = "com.acorn.AnswerMapper.";
-	 	
-	   
-	   
-	    public List<StoreDTO> selectAll() throws Exception {
-	    	System.out.println("good");
-	        return session.selectList(namespace+"test1");
+	     // 준태
+//	    public List<StoreDTO> selectAll() throws Exception {
+//	    	System.out.println("good");
+//	        return session.selectList(namespace+"test1");
+//	    }
+	    
+	    public List<StoreDTO> sellerStore(String sellerCode) {
+	    	return session.selectList(namespaceStore+"sellerStore",sellerCode);
 	    }
 	    
-	    public StoreDTO select(String storeCode) {
-	    	return session.selectOne(namespace+"test2",storeCode);
+	    public void insertStore (StoreDTO store) {
+	    	session.insert(namespaceStore+"insertStore", store);
 	    }
+	    
+
+	    
+	    // 태민
 
 		@Override
-		public com.acorn.baemin.store.StoreDTO selectStoreSubInfo(String storeCode) {
+		public StoreDTO selectStoreSubInfo(String storeCode) {
 			// TODO Auto-generated method stub
 			return null;
 		}
 
 		@Override
-		public int updateStoreSubInfo(com.acorn.baemin.store.StoreDTO store) {
+		public int updateStoreSubInfo(StoreDTO store) {
 			// TODO Auto-generated method stub
 			return 0;
 		}
@@ -73,12 +79,10 @@ public class SellerRepository implements SellerRepositoryI{
 			return null;
 		}
 	    
+	    // 매장정보관리탭
+	    // 매장정보 1개 조회
 	   
-	   
-	 	
-	   
-		   
-	 
+
 
 
 

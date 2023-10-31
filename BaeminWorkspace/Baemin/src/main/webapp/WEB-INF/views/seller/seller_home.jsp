@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -100,7 +101,7 @@
             display: none;
         }
         .store-plus-info{
-            width: 320px;
+            width: 420px;
             margin: 0 auto;
             text-align: right;
             padding: 5px;
@@ -112,6 +113,7 @@
         .store-plus div input{
             height: 35px;
             margin-left:15px;
+            width: 250px;
         }
         .store-plus-but{
             margin: 20px auto 20px auto;
@@ -145,7 +147,6 @@
             font-size: 100px;
             color: white;
             margin-bottom:20px ;
-            
         }
         
         .section-wrap, .store-img-wrap, .store-img,  .store-info-wrap  ,.store-info,.store-info2,.store-but-wrap,.store-but,.store-plus,.store-plus-img{
@@ -157,9 +158,50 @@
     <script>
     $(document).ready(function() {
             $("#plus-click").click(function(){
-            	$("#store-plus").css("display","block"),
+            	$("#store-plus").css("display","block");
             	$("#plus-but").css("display","none");
             })
+            
+            $("#plus-click2").click(function(){
+            	$("#store-plus").css("display","none");
+            	$("#plus-but").css("display","flex");
+            	let sellerCode = 20001;
+            	let storeName = $("#storeName").val();
+            	let storeCategory = $("#storeCategory").val();
+            	let storeImage = $("#storeImage").val();
+            	let storeAddress = $("#storeAddress").val();
+            	let storePhone = $("#storePhone").val();
+            	let minOrderPrice = $("#minOrderPrice").val();
+            	let deliveryFee = $("#deliveryFee").val();
+            	let deliveryArea = $("#deliveryArea").val();
+            	let info = {sellerCode : sellerCode,
+            		storeName : storeName,
+           			storeCategory : storeCategory,
+           			storeImage : storeImage,
+           			storeAddress : storeAddress,
+           			storePhone : storePhone,
+           			minOrderPrice : minOrderPrice,
+           			deliveryFee : deliveryFee,
+           			deliveryArea : deliveryArea};
+            	let infos = JSON.stringify(info);
+            	
+        		$.ajax({
+        			type : "post",
+        			url : "/baemin/sellerHome",
+        			data : infos,
+        			contentType : "application/json", // 필수
+        			success : function(data) {
+        				window.location.reload();
+
+        			},
+        			error : function() {
+        				alert("error");
+        			}
+
+        		})
+            })
+            
+            
         })
     </script>
 <title>Insert title here</title>
@@ -171,6 +213,7 @@
    <section>
         <div class="section-line"></div>
         <div class="section-wrap">
+        <c:forEach items="${list }" var="item">
             <div class="store-list">
                 <div class="store-img-wrap">
                     <div class="store-img">
@@ -179,14 +222,13 @@
                 </div>
                 <div class="store-info-wrap">
                     <div class="store-info">
-                        <div>교촌치킨 홍대점</div>
-                        <div>⭐4.8(+100)</div>
-                        <div>최소주문: 15000</div>
+                        <div>${item.storeName }</div>
+                        <div>⭐ ${item.storeRating}(${item.reviewCount})</div>
+                        <div>최소주문: ${item.minOrderPrice }</div>
                     </div>
                     <div class="store-info2">
                         <div>
-                            10년동안 자리를 지켰습니다. 정성껏 
-                            요리하겠습니다.
+                            ${item.storeDescription}
                         </div>
                     </div>
                 </div>
@@ -197,33 +239,42 @@
                     </div>
                 </div>
             </div>
+           </c:forEach>
            
             <div class="store-plus" id="store-plus"> 
                 <div class="store-plus-info">
-                    <span>매장이름</span><input type="text">
+                    <span>매장이름</span>
+                    <input id="storeName" type="text">
                 </div>
                 <div class="store-plus-info">
-                    <span>음식카테고리</span><input type="text">
+                    <span>음식카테고리</span>
+                    <input id="storeCategory" type="text">
                 </div>
                 <div class="store-plus-info">
-                    <span>매장사진</span><input type="text">
+                    <span>매장사진</span>
+                    <input id="storeImage" type="text">
                 </div>
                 <div class="store-plus-info">
-                    <span>매장주소</span><input type="text">
+                    <span>매장주소</span>
+                    <input id="storeAddress" type="text">
                 </div>
                 <div class="store-plus-info">
-                    <span>매장전화번호</span><input type="text">
+                    <span>매장전화번호</span>
+                    <input id="storePhone" type="text">
                 </div>
                 <div class="store-plus-info">
-                    <span>최소주문금액</span><input type="text">
+                    <span>최소주문금액</span>
+                    <input id="minOrderPrice" type="text">
                 </div>
                 <div class="store-plus-info">
-                    <span>배달비</span><input type="text">
+                    <span>배달비</span>
+                    <input id="deliveryFee" type="text">
                 </div>
                 <div class="store-plus-info">
-                    <span>배달지역</span><input type="text">
+                    <span>배달지역</span>
+                    <input id="deliveryArea" type="text">
                 </div>
-                <div class="store-plus-but">
+                <div class="store-plus-but" id="plus-click2">
                     저장하기
                 </div>
             </div>

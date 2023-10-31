@@ -1,4 +1,4 @@
-package com.acorn.baemin.seller.domain;
+package com.acorn.baemin.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,5 +17,4 @@ public class MenuDTO {
 	String menuClassification;
 
 	int menuStatus;
-
 }

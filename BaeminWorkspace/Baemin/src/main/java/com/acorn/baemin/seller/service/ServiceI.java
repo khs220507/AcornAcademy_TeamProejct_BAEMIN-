@@ -2,10 +2,9 @@ package com.acorn.baemin.seller.service;
 
 import java.util.List;
 
-import com.acorn.baemin.seller.domain.SellerDTO;
-import com.acorn.baemin.store.AnswerDTO;
-import com.acorn.baemin.store.StoreDTO;
-import com.acorn.baemin.user.domain.ReviewDTO;
+import com.acorn.baemin.domain.AnswerDTO;
+import com.acorn.baemin.domain.ReviewDTO;
+import com.acorn.baemin.domain.StoreDTO;
 
 public interface ServiceI {
 	// 以��깭
