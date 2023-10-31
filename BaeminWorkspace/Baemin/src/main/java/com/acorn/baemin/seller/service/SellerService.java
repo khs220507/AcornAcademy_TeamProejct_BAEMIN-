@@ -9,7 +9,7 @@ import com.acorn.baemin.seller.domain.SellerDTO;
 import com.acorn.baemin.seller.repository.SellerRepository;
 import com.acorn.baemin.store.AnswerDTO;
 import com.acorn.baemin.store.StoreDTO;
-import com.acorn.baemin.user.domain.ReviewDTO;
+import com.acorn.baemin.domain.ReviewDTO;
 
 @Service
 public class SellerService implements ServiceI{
@@ -17,14 +17,14 @@ public class SellerService implements ServiceI{
 	@Autowired
 	SellerRepository dao;
 	
-	// �깭誘�
-	// 留ㅼ옣�젙蹂댄꺆
-	// 留ㅼ옣�젙蹂� 1媛� 議고쉶
+	// 占쎄묶沃섓옙
+	// 筌띲끉�삢占쎌젟癰귣똾爰�
+	// 筌띲끉�삢占쎌젟癰귨옙 1揶쏉옙 鈺곌퀬�돳
 	@Override
 	public StoreDTO selectStoreOne(String storeCode) {
 		return dao.selectStoreSubInfo(storeCode);
 	}
-	// 留ㅼ옣�젙蹂� �닔�젙
+	// 筌띲끉�삢占쎌젟癰귨옙 占쎈땾占쎌젟
 	@Override
 	public int modifingStoreSubInfo(StoreDTO store) {
 		return dao.updateStoreSubInfo(store);

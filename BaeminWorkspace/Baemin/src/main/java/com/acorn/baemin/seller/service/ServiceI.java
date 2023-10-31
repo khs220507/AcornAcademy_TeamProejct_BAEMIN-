@@ -5,23 +5,23 @@ import java.util.List;
 import com.acorn.baemin.seller.domain.SellerDTO;
 import com.acorn.baemin.store.AnswerDTO;
 import com.acorn.baemin.store.StoreDTO;
-import com.acorn.baemin.user.domain.ReviewDTO;
+import com.acorn.baemin.domain.ReviewDTO;
 
 public interface ServiceI {
-	// 以��깭
+	// 餓ο옙占쎄묶
 	
-	// �깭誘�
-	// 留ㅼ옣�젙蹂� 1媛� 議고쉶
+	// 占쎄묶沃섓옙
+	// 筌띲끉�삢占쎌젟癰귨옙 1揶쏉옙 鈺곌퀬�돳
 	public StoreDTO selectStoreOne(String storeCode);
-	// 留ㅼ옣�젙蹂� �닔�젙
+	// 筌띲끉�삢占쎌젟癰귨옙 占쎈땾占쎌젟
 	public int modifingStoreSubInfo(StoreDTO store);
-	// 由щ럭愿�由ы꺆
-	// 由щ럭 �쟾泥� 紐⑸줉 議고쉶
+	// �뵳�됰윮�꽴占썹뵳�뗪틙
+	// �뵳�됰윮 占쎌읈筌ｏ옙 筌뤴뫖以� 鈺곌퀬�돳
 	public List<ReviewDTO> getAllReview();
-	// 由щ럭 1嫄댁뿉 ���븳 �떟蹂� �벑濡�
+	// �뵳�됰윮 1椰꾨똻肉� 占쏙옙占쎈립 占쎈뼗癰귨옙 占쎈쾻嚥∽옙
 	public AnswerDTO regiAnswer(String answerContent);
-	// �떟蹂� �닔�젙
+	// 占쎈뼗癰귨옙 占쎈땾占쎌젟
 	public AnswerDTO modifingAnswer(String answerContent);
-	// �떟蹂� �궘�젣
+	// 占쎈뼗癰귨옙 占쎄텣占쎌젫
 	public AnswerDTO deleteAnswer(String answerCode);
 }

@@ -7,7 +7,7 @@
 		<typeAlias alias="StoreDTO"
 			type="com.acorn.baemin.seller.domain.StoreDTO" />
 		<typeAlias alias="UserDTO"
-			type="com.acorn.baemin.user.domain.UserDTO" />
+			type="com.acorn.baemin.domain.UserDTO" />
 		<typeAlias alias="ZzimDTO"
 			type="com.acorn.baemin.home.domain.ZzimDTO" />
 		<typeAlias alias="OrderDTO"

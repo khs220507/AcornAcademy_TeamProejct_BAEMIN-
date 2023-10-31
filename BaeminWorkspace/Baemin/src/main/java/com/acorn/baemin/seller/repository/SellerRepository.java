@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.acorn.baemin.seller.domain.StoreDTO;
 import com.acorn.baemin.store.AnswerDTO;
-import com.acorn.baemin.user.domain.ReviewDTO;
+import com.acorn.baemin.domain.ReviewDTO;
 
 
 

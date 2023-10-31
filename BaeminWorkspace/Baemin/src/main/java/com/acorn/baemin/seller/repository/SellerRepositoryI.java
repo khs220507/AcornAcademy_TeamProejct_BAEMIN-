@@ -5,7 +5,7 @@ import java.util.List;
 import com.acorn.baemin.seller.domain.SellerDTO;
 import com.acorn.baemin.store.AnswerDTO;
 import com.acorn.baemin.store.StoreDTO;
-import com.acorn.baemin.user.domain.ReviewDTO;
+import com.acorn.baemin.domain.ReviewDTO;
 
 
 public interface SellerRepositoryI {
