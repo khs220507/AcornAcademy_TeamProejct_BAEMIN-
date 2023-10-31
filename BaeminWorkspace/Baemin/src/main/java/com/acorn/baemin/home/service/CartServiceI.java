@@ -2,8 +2,9 @@ package com.acorn.baemin.home.service;
 
 import java.util.List;
 
-import com.acorn.baemin.home.domain.CartDTO;
+
+import com.acorn.baemin.home.domain.CartMenuDTO;
 
 public interface CartServiceI {
-	public List<CartDTO> getCartListAll();
+	public List<CartMenuDTO> selectCartMenuAll();
 }

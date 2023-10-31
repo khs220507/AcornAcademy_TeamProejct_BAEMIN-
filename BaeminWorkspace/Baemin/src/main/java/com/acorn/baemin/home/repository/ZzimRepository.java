@@ -6,7 +6,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.acorn.baemin.home.domain.ZzimDTO;
+import com.acorn.baemin.domain.ZzimDTO;
+
+
 
 @Repository
 public class ZzimRepository implements InterZzimRepository{

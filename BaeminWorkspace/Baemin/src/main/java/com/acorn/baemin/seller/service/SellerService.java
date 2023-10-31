@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.acorn.baemin.seller.domain.SellerDTO;
+import com.acorn.baemin.domain.SellerDTO;
 import com.acorn.baemin.seller.repository.SellerRepository;
-import com.acorn.baemin.store.AnswerDTO;
-import com.acorn.baemin.store.StoreDTO;
-import com.acorn.baemin.user.domain.ReviewDTO;
+import com.acorn.baemin.domain.AnswerDTO;
+import com.acorn.baemin.domain.StoreDTO;
+import com.acorn.baemin.domain.ReviewDTO;
 
 @Service
 public class SellerService implements ServiceI{

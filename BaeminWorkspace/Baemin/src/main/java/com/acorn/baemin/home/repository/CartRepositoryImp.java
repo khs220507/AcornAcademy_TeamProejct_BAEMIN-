@@ -6,18 +6,23 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.acorn.baemin.home.domain.CartDTO;
+import com.acorn.baemin.domain.CartDTO;
+import com.acorn.baemin.home.domain.CartMenuDTO;
+
+
 
 @Repository
 public class CartRepositoryImp implements CartRepositoryI {
 	@Autowired
 	private SqlSession session;
 	
-	private static String namespace ="com.acorn.cartMapper.";
+	private static String namespace ="com.acorn.CartMapper.";
 
 	@Override
-	public List<CartDTO> selectAll() {
-		return session.selectList(namespace + "selectAll");
+	public List<CartMenuDTO> selectCartMenuAll() {
+		return session.selectList(namespace + "selectStoreNameAll");
 	}
+
+
 
 }

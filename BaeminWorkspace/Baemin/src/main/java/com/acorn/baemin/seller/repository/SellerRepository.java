@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 
-import com.acorn.baemin.seller.domain.StoreDTO;
-import com.acorn.baemin.store.AnswerDTO;
-import com.acorn.baemin.user.domain.ReviewDTO;
+import com.acorn.baemin.domain.StoreDTO;
+import com.acorn.baemin.domain.AnswerDTO;
+import com.acorn.baemin.domain.ReviewDTO;
 
 
 
@@ -38,13 +38,13 @@ public class SellerRepository implements SellerRepositoryI{
 	    }
 
 		@Override
-		public com.acorn.baemin.store.StoreDTO selectStoreSubInfo(String storeCode) {
+		public StoreDTO selectStoreSubInfo(String storeCode) {
 			// TODO Auto-generated method stub
 			return null;
 		}
 
 		@Override
-		public int updateStoreSubInfo(com.acorn.baemin.store.StoreDTO store) {
+		public int updateStoreSubInfo(StoreDTO store) {
 			// TODO Auto-generated method stub
 			return 0;
 		}
@@ -72,6 +72,8 @@ public class SellerRepository implements SellerRepositoryI{
 			// TODO Auto-generated method stub
 			return null;
 		}
+
+		
 	    
 	   
 	   

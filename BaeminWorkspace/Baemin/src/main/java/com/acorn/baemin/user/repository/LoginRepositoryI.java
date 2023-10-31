@@ -2,7 +2,7 @@ package com.acorn.baemin.user.repository;
 
 import java.util.List;
 
-import com.acorn.baemin.user.domain.UserDTO;
+import com.acorn.baemin.domain.UserDTO;
 
 public interface LoginRepositoryI {
 
