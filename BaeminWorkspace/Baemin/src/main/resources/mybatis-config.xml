@@ -14,8 +14,12 @@
 			type="com.acorn.baemin.domain.OrderDTO" />
 		<typeAlias alias="CartDTO"
 			type="com.acorn.baemin.domain.CartDTO" />
-			<typeAlias alias="CartMenuDTO"
-			type="com.acorn.baemin.home.domain.CartMenuDTO" />
+			
+			<typeAlias alias="CartDTOTest"
+			type="com.acorn.baemin.cart.domain.CartDTO" />
+			<typeAlias alias="StoreDTODTOTest"
+			type="com.acorn.baemin.cart.domain.StoreDTO" />
+			
 
 	</typeAliases>
 </configuration>
