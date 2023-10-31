@@ -1,10 +1,12 @@
-package com.acorn.baemin.home.domain;
+package com.acorn.baemin.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
-
+import lombok.NoArgsConstructor;
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class OrderDTO {
-
 	int  orderNumber;
 	int userCode;
 	int storeCode;
@@ -14,6 +16,4 @@ public class OrderDTO {
 	String reqToSeller;
 	String reqToRider;
 	String orderStatus;
-	
-	
 }

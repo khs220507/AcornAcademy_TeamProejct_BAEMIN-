@@ -8,9 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
-import com.acorn.baemin.seller.domain.StoreDTO;
+import com.acorn.baemin.domain.StoreDTO;
 import com.acorn.baemin.seller.repository.SellerRepository;
+
 @Controller
 public class SellerController {
 	@Autowired
@@ -22,17 +22,17 @@ public class SellerController {
 	
 	// 준태
 
-	@GetMapping("/Sellerone")
+	@GetMapping("/sellerOne")
 	public String selectAll( Model model) {
 
-		StoreDTO result  = rep.select("30001");
+		StoreDTO result  = rep.select(30001);
 		model.addAttribute("item", result);
 		System.out.println( result);
 		return "seller/test2";
 		}
 	
 
-	@GetMapping("/sellerall")
+	@GetMapping("/sellerAll")
 	public String  main(Model model ) {		
 		List<StoreDTO> result;
 
