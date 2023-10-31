@@ -1,4 +1,4 @@
-package com.acorn.baemin.user;
+package com.acorn.baemin.user.domain;
 
 import lombok.Data;
 

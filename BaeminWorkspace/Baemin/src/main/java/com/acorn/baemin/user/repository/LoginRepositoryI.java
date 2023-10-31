@@ -1,9 +1,23 @@
-package com.acorn.baemin.user;
+package com.acorn.baemin.user.repository;
 
 import java.util.List;
 
-public interface UserRepositoryI {
+import com.acorn.baemin.user.domain.UserDTO;
 
+public interface LoginRepositoryI {
+
+	// 홈(사장님)
+	public String sellerHome();
+
+	// 회원가입(사장님)
+	public String sellerSignup();
+
+	// 로그인(사장님)
+	public String sellerLogin();
+
+	// 내정보수정(사장님)
+	public String sellerModify();
+	
 	public List<UserDTO> selectAll() throws Exception;
 
 	public boolean loginCustomer(String unputId, String inputPw) throws Exception;
@@ -29,4 +43,5 @@ public interface UserRepositoryI {
 	// 내정보수정(고객)
 	public String customerModify();
 
+	
 }
