@@ -5,15 +5,15 @@
 <configuration>
 	<typeAliases>
 		<typeAlias alias="StoreDTO"
-			type="com.acorn.baemin.seller.domain.StoreDTO" />
+			type="com.acorn.baemin.domain.StoreDTO" />
 		<typeAlias alias="UserDTO"
-			type="com.acorn.baemin.user.domain.UserDTO" />
+			type="com.acorn.baemin.domain.UserDTO" />
 		<typeAlias alias="ZzimDTO"
-			type="com.acorn.baemin.home.domain.ZzimDTO" />
+			type="com.acorn.baemin.domain.ZzimDTO" />
 		<typeAlias alias="OrderDTO"
-			type="com.acorn.baemin.home.domain.OrderDTO" />
+			type="com.acorn.baemin.domain.OrderDTO" />
 		<typeAlias alias="CartDTO"
-			type="com.acorn.baemin.home.domain.CartDTO" />
+			type="com.acorn.baemin.domain.CartDTO" />
 
 	</typeAliases>
 </configuration>

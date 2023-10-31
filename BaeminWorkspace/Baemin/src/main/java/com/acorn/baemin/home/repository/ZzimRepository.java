@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.acorn.baemin.home.domain.ZzimDTO;
+import com.acorn.baemin.domain.ZzimDTO;
 
 @Repository
 public class ZzimRepository implements InterZzimRepository{
@@ -16,12 +16,14 @@ public class ZzimRepository implements InterZzimRepository{
  	
     private static String namespace = "com.acorn.HomeMapper.";
     
+    @Override
     public List<ZzimDTO> zzimSelectAll(int userCode) throws Exception {
     	System.out.println("zzimList show");
         return session.selectList(namespace+"zzimSelectAll",userCode);
     }
     
 
+    @Override
     public int zzimDelete( int userCode, int storeCode) throws Exception {
     	
     	ZzimDTO zzimDTO = new ZzimDTO();

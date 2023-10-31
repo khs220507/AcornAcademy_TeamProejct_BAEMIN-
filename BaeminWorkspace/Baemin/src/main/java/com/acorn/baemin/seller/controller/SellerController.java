@@ -8,8 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
-import com.acorn.baemin.seller.domain.StoreDTO;
+import com.acorn.baemin.domain.StoreDTO;
 import com.acorn.baemin.seller.repository.SellerRepository;
 @Controller
 public class SellerController {

@@ -2,45 +2,45 @@ package com.acorn.baemin.user.repository;
 
 import java.util.List;
 
-import com.acorn.baemin.user.domain.UserDTO;
+import com.acorn.baemin.domain.UserDTO;
 
 public interface LoginRepositoryI {
 
-	// È¨(»çÀå´Ô)
+	// È¨(ï¿½ï¿½ï¿½ï¿½ï¿½)
 	public String sellerHome();
 
-	// È¸¿ø°¡ÀÔ(»çÀå´Ô)
+	// È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½)
 	public String sellerSignup();
 
-	// ·Î±×ÀÎ(»çÀå´Ô)
+	// ï¿½Î±ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½)
 	public String sellerLogin();
 
-	// ³»Á¤º¸¼öÁ¤(»çÀå´Ô)
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½)
 	public String sellerModify();
 	
 	public List<UserDTO> selectAll() throws Exception;
 
 	public boolean loginCustomer(String unputId, String inputPw) throws Exception;
 
-	// ·Î±×ÀÎ
+	// ï¿½Î±ï¿½ï¿½ï¿½
 	public String login();
 
 	// È¨
 	public String home();
 
-	// °¡ÀÔ ¼±ÅÃ
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public String selectSignup();
 
-	// È¸¿ø°¡ÀÔ(°í°´)
+	// È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½)
 	public String customerSignup();
 
-	// °í°´È¨(·Î±×ÀÎ ÈÄ)
+	// ï¿½ï¿½È¨(ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½)
 	public String customerHome();
 
-	// ·Î±×¾Æ¿ô
+	// ï¿½Î±×¾Æ¿ï¿½
 	public String logout();
 
-	// ³»Á¤º¸¼öÁ¤(°í°´)
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½)
 	public String customerModify();
 
 	
