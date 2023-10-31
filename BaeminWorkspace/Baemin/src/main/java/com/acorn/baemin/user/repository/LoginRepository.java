@@ -1,4 +1,4 @@
-package com.acorn.baemin.user;
+package com.acorn.baemin.user.repository;
 
 import java.util.List;
 
@@ -6,12 +6,42 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.acorn.baemin.user.domain.UserDTO;
+
 @Repository
-public class UserRepository implements UserRepositoryI {
+public class LoginRepository implements LoginRepositoryI{
+
 	@Autowired
 	private SqlSession session;
 
-	private static String namespace = "com.acorn.userMapper.";	
+	private static String namespace = "com.acorn.LoginMapper.";
+
+	@Override
+	public String sellerHome() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String sellerSignup() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String sellerLogin() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String sellerModify() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+	
 	
 	@Override
 	public List<UserDTO> selectAll() throws Exception {
@@ -65,6 +95,5 @@ public class UserRepository implements UserRepositoryI {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-
+	
 }

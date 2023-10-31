@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service;
 
 import com.acorn.baemin.seller.domain.SellerDTO;
 import com.acorn.baemin.seller.repository.SellerRepository;
+import com.acorn.baemin.store.AnswerDTO;
 import com.acorn.baemin.store.StoreDTO;
+import com.acorn.baemin.user.domain.ReviewDTO;
 
 @Service
 public class SellerService implements ServiceI{
@@ -15,38 +17,38 @@ public class SellerService implements ServiceI{
 	@Autowired
 	SellerRepository dao;
 	
-	// 태민
-	// 매장정보탭
-	// 매장정보 1개 조회
+	// �깭誘�
+	// 留ㅼ옣�젙蹂댄꺆
+	// 留ㅼ옣�젙蹂� 1媛� 議고쉶
 	@Override
 	public StoreDTO selectStoreOne(String storeCode) {
 		return dao.selectStoreSubInfo(storeCode);
 	}
-	// 매장정보 수정
+	// 留ㅼ옣�젙蹂� �닔�젙
 	@Override
 	public int modifingStoreSubInfo(StoreDTO store) {
 		return dao.updateStoreSubInfo(store);
 	}
-	
-	// 리뷰탭
-	// 리뷰 전체목록 조회
 	@Override
 	public List<ReviewDTO> getAllReview() {
-		return dao.selectAllReview();
+		// TODO Auto-generated method stub
+		return null;
 	}
-	// 리뷰 1건에 대한 답변 등록
 	@Override
 	public AnswerDTO regiAnswer(String answerContent) {
-		return dao.insertAnswer(answerContent);
+		// TODO Auto-generated method stub
+		return null;
 	}
-	// 답변 수정
 	@Override
 	public AnswerDTO modifingAnswer(String answerContent) {
-		return dao.updateAnswer(answerContent);
+		// TODO Auto-generated method stub
+		return null;
 	}
-	// 답변 삭제
 	@Override
 	public AnswerDTO deleteAnswer(String answerCode) {
-		return dao.deleteAnswer(answerCode);
+		// TODO Auto-generated method stub
+		return null;
 	}
+	
+	
 }
