@@ -161,11 +161,18 @@
             	$("#store-plus").css("display","block");
             	$("#plus-but").css("display","none");
             })
+<<<<<<< HEAD
             
             $("#plus-click2").click(function(){
             	$("#store-plus").css("display","none");
             	$("#plus-but").css("display","flex");
             	let sellerCode = 20001;
+=======
+            $("#plus-click2").click(function(){
+            	$("#store-plus").css("display","none");
+            	$("#plus-but").css("display","flex");
+            /*	let sellerCode = 20001;
+>>>>>>> f880ac08703c011308f9419419520cca3f432121
             	let storeName = $("#storeName").val();
             	let storeCategory = $("#storeCategory").val();
             	let storeImage = $("#storeImage").val();
@@ -198,10 +205,15 @@
         				alert("error");
         			}
 
+<<<<<<< HEAD
         		})
             })
             
             
+=======
+        		})*/
+            })
+>>>>>>> f880ac08703c011308f9419419520cca3f432121
         })
     </script>
 <title>Insert title here</title>

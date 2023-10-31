@@ -8,26 +8,24 @@
 <!-- 찜관련 -->
     
     <!-- 찜 조회 -->
-    <select id="zzimSelectAll" resultType="zzimDTO" parameterType="int">
+    <select id="zzimSelectAll" resultType="ZzimDTO" parameterType="int">
         SELECT *
         FROM zzim_tbl
         WHERE userCode = #{userCode}
     </select>
     
      <!-- 찜 삭제 -->
-	 <select id="zzimDelete" resultType="zzimDTO" parameterType="int">
+	 <select id="zzimDelete" resultType="ZzimDTO" parameterType="int">
         DELETE FROM zzim_tbl 
 		WHERE userCode = #{userCode} AND storeCode = #{storeCode} 
     </select>
     
  
  <!-- 주문내역 관련 -->
- 	<!-- 주문내역 조회  여기수정!!!!!-->
+ 	<!-- 주문내역 조회 -->
     <select id="orderSelectAll" resultType="OrderDTO" parameterType="int">
-    	SELECT  d,f,g,h,h,j,k,k,
-        FROM order_tbl  o
-        join store_tbl  s
-        on  o.storeCode = s.storeCode
+    	SELECT *
+        FROM order_tbl
         WHERE userCode = #{userCode}
     </select>
     

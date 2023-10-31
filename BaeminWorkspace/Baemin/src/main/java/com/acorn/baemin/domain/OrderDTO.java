@@ -10,6 +10,14 @@ public class OrderDTO {
 	int  orderNumber;
 	int userCode;
 	int storeCode;
+<<<<<<< HEAD
+=======
+	String orderMenuName;
+	int orderMenuNumber;
+	int orderMenuPrice;
+	String orderStoreName;
+	String orderStoreImage;
+>>>>>>> f880ac08703c011308f9419419520cca3f432121
 	String orderDate;
 	int payType;
 	int orderType;

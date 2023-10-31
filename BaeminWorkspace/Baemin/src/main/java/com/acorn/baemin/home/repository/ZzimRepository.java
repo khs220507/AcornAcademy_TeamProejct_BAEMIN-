@@ -7,6 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.acorn.baemin.domain.ZzimDTO;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f880ac08703c011308f9419419520cca3f432121
 
 @Repository
 public class ZzimRepository implements InterZzimRepository{

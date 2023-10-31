@@ -32,19 +32,12 @@
         }
         /* 섹션  ////////////////////////////////////////////////////*/
         section{
-          flex: 7.3;
+          flex: 7.8;
           width: 1280px;
-          border: 1px solid black;
           
           overflow-y: auto; /*섹션의 내용이 넘치는 경우 스크롤이 가능*/
         }
-    
-        /* 푸터  ////////////////////////////////////////////////////*/
-        footer{
-          flex: 1.5;
-          width: 1280px;
-          border: 1px solid black;
-        }
+   
       </style>
 </head>
 <body>
@@ -59,7 +52,7 @@
       
       </section>
 
-      <footer></footer>
+    <jsp:include page="../base/footer.jsp"/>
 
 </body>
 </html>

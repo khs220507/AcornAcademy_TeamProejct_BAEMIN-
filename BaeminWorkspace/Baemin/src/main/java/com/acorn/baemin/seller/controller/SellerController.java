@@ -7,7 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.PathVariable;
+=======
+>>>>>>> f880ac08703c011308f9419419520cca3f432121
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -41,11 +44,14 @@ public class SellerController {
 		rep.insertStore(Store);
 	}
 	
+<<<<<<< HEAD
 	@ResponseBody
 	@RequestMapping( value="/sellerHome/{storeName}" , method=RequestMethod.DELETE)
 	public void delete(@PathVariable String storecode) {
 		rep.delete(storecode);
 	}
+=======
+>>>>>>> f880ac08703c011308f9419419520cca3f432121
 
 //	@GetMapping("/sellerall")
 //	public String  main(Model model ) {		

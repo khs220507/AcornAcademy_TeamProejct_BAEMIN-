@@ -37,17 +37,19 @@
           flex: 1.2;
           justify-content:center;
           align-items: center;
-          width: 1280px;
-    
-          border: 1px solid black;
+          width: 100vw;
           background-color: #48D1CC;
 
           position: relative;
         }
+        .header-wrap{
+    	width:1280px;
+    	display:flex;
+   		 }
         .logo{
           flex: 2.5;
           display: flex;
-          justify-content: center;
+          justify-content: flex-start;
           align-items: center;
           
         }
@@ -113,7 +115,7 @@
         .login-btn-wrap{
           flex: 2.5;
           display: flex;
-          justify-content: center;
+          justify-content: flex-end;
           align-items: center;
         }
         
@@ -167,6 +169,7 @@
 <body>
 
     <header>
+     <div class="header-wrap">
           <div class="logo">
               <a href="/baemin/home">배달의민족</a>
           </div>
@@ -208,7 +211,7 @@
               로그아웃
             </li>
           </ul>
-    
+    	</div>
       </header>
 
       <script>

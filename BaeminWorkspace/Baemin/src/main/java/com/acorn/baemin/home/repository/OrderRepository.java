@@ -7,7 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.acorn.baemin.domain.OrderDTO;
+<<<<<<< HEAD
 import com.acorn.baemin.domain.ZzimDTO;
+=======
+>>>>>>> f880ac08703c011308f9419419520cca3f432121
 
 @Repository
 public class OrderRepository implements InterOrderRepository{
@@ -17,6 +20,7 @@ public class OrderRepository implements InterOrderRepository{
 	
 	private static String namespace = "com.acorn.HomeMapper.";
 	
+	@Override
 	public List<OrderDTO> orderSelectAll(int userCode) throws Exception {
     	System.out.println("orderList show");
         return session.selectList(namespace+"orderSelectAll",userCode);

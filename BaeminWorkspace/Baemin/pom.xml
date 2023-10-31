@@ -185,6 +185,36 @@
             <version>20180130</version>
         </dependency>
 		
+	<!-- json관련 -->
+            <!--  @ResponsBody java객체를 json으로 바인딩-->  
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.3</version>
+        </dependency> 
+            <!--  @RequestBody json 을 java객체로 바인딩-->        
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+            <!--  json 다룰때-->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180130</version>
+        </dependency>
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		  
 	</dependencies>
     <build>

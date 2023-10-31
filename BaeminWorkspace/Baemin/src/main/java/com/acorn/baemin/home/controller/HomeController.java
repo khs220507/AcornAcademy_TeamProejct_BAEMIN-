@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+<<<<<<< HEAD
 // 誘쇱�
 import com.acorn.baemin.domain.OrderDTO;
 import com.acorn.baemin.domain.ZzimDTO;
@@ -15,10 +16,15 @@ import com.acorn.baemin.home.repository.ZzimRepository;
 // �쁽�닔
 import com.acorn.baemin.domain.CartDTO;
 import com.acorn.baemin.home.service.CartServiceI;
+=======
+import com.acorn.baemin.domain.CartDTO;
+import com.acorn.baemin.domain.OrderDTO;
+import com.acorn.baemin.domain.ZzimDTO;
+import com.acorn.baemin.home.domain.CartMenuDTO;
+import com.acorn.baemin.home.repository.OrderRepository;
+import com.acorn.baemin.home.repository.ZzimRepository;
+>>>>>>> f880ac08703c011308f9419419520cca3f432121
 import com.acorn.baemin.home.service.CartServiceImp;
-
-
-
 
 
 @Controller
@@ -33,13 +39,13 @@ public class HomeController {
 	@Autowired
 	CartServiceImp Imp;	
 	
-
+	// 홈화면
 	@GetMapping("/home")
 	public String home() {
 		return "home/home";
 	}
   
- 
+	// 찜
 	@GetMapping("/zzim")
 	public String zzimList(Model model) {
 		List<ZzimDTO> result;
@@ -56,13 +62,14 @@ public class HomeController {
 	}
 	
 	
-
+	// 주문내역
 	@GetMapping("/orderList")
 	public String orderList(Model model) {
 		List<OrderDTO> result;
 		
 		try {
-			result = orderDAO.orderSelectAll(10002);
+			result = orderDAO.orderSelectAll(10001);
+			System.out.println(result);
 			model.addAttribute("orderList", result);
 			
 		} catch (Exception e) {
@@ -77,7 +84,7 @@ public class HomeController {
 	
 	@GetMapping("/cartList")
 	public String cartList(Model model) {
-		List<CartDTO> result = Imp.getCartListAll();
+		List<CartMenuDTO> result = Imp.selectCartMenuAll();
 		model.addAttribute("list", result);
 		return "home/cart_list";
 

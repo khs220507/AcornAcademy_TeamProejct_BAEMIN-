@@ -5,9 +5,13 @@
 
 <mapper namespace="com.acorn.CartMapper">
 
-	<select id="selectAll" resultType="CartDTO">
-		SELECT *
-		FROM cart_tbl
+	<select id="selectStoreNameAll" resultType="CartMenuDTO">
+		SELECT * FROM
+		cart_tbl c
+		LEFT OUTER JOIN menu_tbl s ON c.storeCode = s.storeCode
+		UNION
+		SELECT * FROM cart_tbl c
+		RIGHT OUTER JOIN menu_tbl s ON c.storeCode = s.storeCode;
 	</select>
 
 </mapper>
