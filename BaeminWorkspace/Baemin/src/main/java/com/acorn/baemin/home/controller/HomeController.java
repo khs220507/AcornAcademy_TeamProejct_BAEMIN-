@@ -7,23 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-<<<<<<< HEAD
-// 誘쇱�
+
+import com.acorn.baemin.domain.CartDTO;
 import com.acorn.baemin.domain.OrderDTO;
 import com.acorn.baemin.domain.ZzimDTO;
 import com.acorn.baemin.home.repository.OrderRepository;
 import com.acorn.baemin.home.repository.ZzimRepository;
-// �쁽�닔
-import com.acorn.baemin.domain.CartDTO;
-import com.acorn.baemin.home.service.CartServiceI;
-=======
-import com.acorn.baemin.domain.CartDTO;
-import com.acorn.baemin.domain.OrderDTO;
-import com.acorn.baemin.domain.ZzimDTO;
-import com.acorn.baemin.home.domain.CartMenuDTO;
-import com.acorn.baemin.home.repository.OrderRepository;
-import com.acorn.baemin.home.repository.ZzimRepository;
->>>>>>> f880ac08703c011308f9419419520cca3f432121
 import com.acorn.baemin.home.service.CartServiceImp;
 
 
