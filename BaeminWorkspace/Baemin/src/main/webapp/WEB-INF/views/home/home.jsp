@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,15 +37,18 @@
       flex: 1.5;
       justify-content:center;
       align-items: center;
-      width: 1280px;
+      width:100vw;
 
-      border: 1px solid black;
 	    background-color: #48D1CC;
+    }
+    .header-wrap{
+    	width:1280px;
+    	display:flex;
     }
     .logo{
       flex: 2.5;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       
     }
@@ -110,7 +114,7 @@
     .login-btn-wrap{
       flex: 2.5;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
     }
     .login-btn-wrap a{
@@ -154,30 +158,25 @@
     .kakao-map-wrap{
       width: 600px;
       height: 500px;
-      border: 1px solid black;
       margin: 0 auto;
     }
 
     /* 섹션  ////////////////////////////////////////////////////*/
     section{
-      flex: 7;
+      flex: 7.5;
       width: 1280px;
-      border: 1px solid black;
     }
 
-    /* 푸터  ////////////////////////////////////////////////////*/
-    footer{
-      flex: 1.5;
-      width: 1280px;
-      border: 1px solid black;
-    }
+    
   </style>
 </head>
 <body>
  <header>
-    <div class="logo">
-		<a href="/final/home">배달의민족</a>
-	</div>
+ 
+    <div class="header-wrap">
+    	<div class="logo">
+			<a href="/baemin/home">배달의민족</a>
+		</div>
       <div class="info-wrap">
           <div class="address-wrap">
             <p>인천 서구 가좌동</p>
@@ -189,7 +188,20 @@
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADBElEQVR4nO1YzWsTQRQfFb1Z1Ioaj+rJq1Q9W8281NpaMOhB6sG/olUQeq34PwiibW+1Z7+gaJJ5m30vhsZPBKFFb3qsVSJvE7Q7u5UknU0b2R8MISTz2/dm3sfvrVIpUqRI0bMYXCr258iMA5tZIIPAZlmTWZXP5vdZ+T1bfXlAbSdkq94JzWYGGNeAsd7CWtOMj+A1Ht9Sw/PV6h5NeA8Yf7RoeGg1bgfvnkLcvSXhAoxPOzE84gjj4gWiQ10zfhjxIJB5H2sQoacJJ6BcGtCIGTld+cz65rRmnNSM5XhHzDvh7VLYmBcxhr8B8i61wqG5NKIZ38Y48izxcGrGvG38/EhtcW87PPJ/YLMQDScznWi1iSQs4fyden1nJ3yyz3ZCk1m9WCkdc299cPVBqQyFTbsnbwMKhT6Jf4v3oUqo6oTqfJZw2AW3ZjNq94nBpWK/colGhw1XG5f8kerke9dd8qtAHoRiFScc89+yknnGJb9qaJl1J1QuDbjkHyI8Y91wzSW/AsaV9Q84V3l12CX/ec87anXn7y75VVO3/HmANDSX/MIHViIrxzG6HDohxEySNwCEXxLNAdE2ieYAYzXZKsQ46ZJfs7ltdeQHvdMH6vUdQIbC/OamcgkZA+1OLKrSBTf4OGbroaFq8YhKWgsFkrhQ6NsM56jv79OEHyze+yoJyAxrl1PN5nGnajQ/N7dL9tunD+XySZUUZIaNmaYW2r2J4OQt46GxplSSCEZEwudxI2GugpdbSlgfxzThx7jRMkdmXHVlJrY1/N/49UWYSV2X5hSMoIgZYDwbCDa72kT3/wQqXUvcCdHrms2TfxnT6dLihGs5vWE4sZm2E7tlQxv7poDxRmA0h7VQV25CIDOsjIGtvpkTw6VUrq82YixE93fPiYYjlf1y9UG/IKwB4zdN5hew+SraRuSBdNiNmhRsByc2C6hgPtrxu5QTrgD/hRNsrvS+ExSfE/IaRvUKcuRdjThB+Fn1EnJRJ1ZUr0EHb+/MJzl9V3NIihQpUijn+A1qcPW2rNhwowAAAABJRU5ErkJggg==">
           </div>
       </div>
-      <div class="login-btn-wrap"><a href="">로그인</a></div>
+    
+      <div class="login-btn-wrap">
+      
+        <!-- 로그인 안했을때 -->
+     	 <a href="login">로그인</a>
+      
+      	<!-- 로그인 했을때 -->
+      	
+      </div>
+    
+    </div>
+      
+      
+
 
   </header>
 
@@ -208,7 +220,7 @@
 
 
   <section></section>
-  <footer></footer>
+	<jsp:include page="../base/footer.jsp"/>
 
   <script>
     // 카카오맵 모달 띄우기

@@ -4,8 +4,7 @@
 		"http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-		<typeAlias alias="StoreDTO" type="com.acorn.baemin.seller.StoreDTO"/>
-
-
+		<typeAlias alias="StoreDTO"
+			type="com.acorn.baemin.domain.StoreDTO" />
 	</typeAliases>
 </configuration>

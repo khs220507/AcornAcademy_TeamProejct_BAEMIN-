@@ -4,3 +4,4 @@ Servers/
 target/
 test.xml
 root-context.xml
+*.sql

@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-${item }
+${item.sellerCode }
 </body>
 </html>
