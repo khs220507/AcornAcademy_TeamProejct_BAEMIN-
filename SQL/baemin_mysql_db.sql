@@ -80,7 +80,6 @@ INSERT INTO store_tbl (sellerCode, storeName, storeCategory, storeImage, storeAd
 (20004, 'Tasty Tacos', 'Mexican', 'https://example.com/tacos.jpg', '555 Pine St, County, Country', '555-444-5555', 28, 12, 4.1, 'Savor the flavors of Mexico with our delicious tacos.', 18, 2, '12:00 PM - 9:00 PM', 'County Area', 1),
 (20005, 'Asian Delights', 'Asian', 'https://example.com/asian.jpg', '777 Cedar St, Town, Country', '555-555-6666', 42, 20, 4.3, 'Explore the diverse flavors of Asia at our restaurant.', 25, 3, '10:30 AM - 10:00 PM', 'Town Area', 1);
 
-<<<<<<< HEAD
 INSERT INTO store_tbl 
 		(sellerCode, storeName, storeCategory, storeImage, storeAddress, storePhone, minOrderPrice, deliveryFee, deliveryArea)
 		VALUES 
@@ -89,23 +88,6 @@ INSERT INTO store_tbl
 ALTER TABLE store_tbl
 MODIFY operatingTime VARCHAR(50),
 MODIFY storeStatus TINYINT default 0;
-=======
-INSERT INTO store_tbl (sellerCode, storeName, storeCategory, storeImage, storeAddress, storePhone, zzimCount, reviewCount, storeRating, storeDescription, minOrderPrice, deliveryFee, operatingTime, deliveryArea, storeStatus) VALUES
-(20001, 'Delicious Pizza', 'Pizza', 'https://example.com/pizza.jpg', '123 Main St, City, Country', '555-111-2222', 50, 25, 4.5, 'Welcome to Delicious Pizza! We serve the best pizzas in town.', 15, 2, '10:00 AM - 10:00 PM', 'City Area', 1),
-(20002, 'Sushi Palace', 'Sushi', 'https://example.com/sushi.jpg', '456 Elm St, Town, Country', '555-222-3333', 40, 18, 4.2, 'Experience the finest sushi at Sushi Palace.', 20, 3, '11:30 AM - 9:30 PM', 'Town Area', 1),
-(20003, 'Burger Haven', 'Burgers', 'https://example.com/burgers.jpg', '789 Oak St, Village, Country', '555-333-4444', 35, 15, 4.0, 'Home of the juiciest burgers in the village!', 12, 2, '11:00 AM - 10:00 PM', 'Village Area', 1),
-(20004, 'Tasty Tacos', 'Mexican', 'https://example.com/tacos.jpg', '555 Pine St, County, Country', '555-444-5555', 28, 12, 4.1, 'Savor the flavors of Mexico with our delicious tacos.', 18, 2, '12:00 PM - 9:00 PM', 'County Area', 1),
-(20005, 'Asian Delights', 'Asian', 'https://example.com/asian.jpg', '777 Cedar St, Town, Country', '555-555-6666', 42, 20, 4.3, 'Explore the diverse flavors of Asia at our restaurant.', 25, 3, '10:30 AM - 10:00 PM', 'Town Area', 1);
-
-INSERT INTO store_tbl
-		(sellerCode, storeName, storeCategory, storeImage, storeAddress, storePhone, minOrderPrice, deliveryFee, deliveryArea)
-		VALUES
-		(20001,'test','test','test','test','test',2000,2000,'test');
-ALTER TABLE store_tbl
-MODIFY operatingTime VARCHAR(50),
-MODIFY storeStatus TINYINT default 0;
-
->>>>>>> f880ac08703c011308f9419419520cca3f432121
 
 
 -- 04 태민 menu_tbl;
@@ -288,11 +270,6 @@ INSERT INTO address_tbl (userCode, deliveryAddress) VALUES
 (10003, '789 Oak St, Village, Country'),
 (10004, '555 Pine St, County, Country'),
 (10005, '777 Cedar St, Town, Country');
-<<<<<<< HEAD
-
-=======
->>>>>>> f880ac08703c011308f9419419520cca3f432121
-
 
 commit;
 
@@ -313,9 +290,7 @@ DROP TABLE user_tbl;
 
 SHOW TABLES;
 
-<<<<<<< HEAD
-commit;
-=======
+
 
 SELECT * FROM cart_tbl c
 LEFT OUTER JOIN order_tbl s ON c.storeCode = s.storeCode
@@ -324,4 +299,3 @@ SELECT * FROM cart_tbl c
 RIGHT OUTER JOIN order_tbl s ON c.storeCode = s.storeCode;
 
 COMMIT;
->>>>>>> f880ac08703c011308f9419419520cca3f432121

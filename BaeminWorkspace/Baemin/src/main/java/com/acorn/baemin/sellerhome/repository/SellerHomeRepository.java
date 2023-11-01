@@ -8,17 +8,10 @@ import org.springframework.stereotype.Repository;
 import com.acorn.baemin.domain.StoreDTO;
 @Repository
 public class SellerHomeRepository  {
-	@Autowired
-	private SqlSession session;
+		@Autowired
+		private SqlSession session;
 
-	
 	    private static String namespaceStore = "com.acorn.StoreMapper.";
-	    
-	     // 준태
-//	    public List<StoreDTO> selectAll() throws Exception {
-//	    	System.out.println("good");
-//	        return session.selectList(namespace+"test1");
-//	    }
 	
 	    public List<StoreDTO> sellerStore(String sellerCode) {
 	    	return session.selectList(namespaceStore+"sellerStore",sellerCode);
@@ -27,6 +20,19 @@ public class SellerHomeRepository  {
 	    public void insertStore (StoreDTO store) {
 	    	session.insert(namespaceStore+"insertStore", store);
 	    }
+	    
+	    public void deleteStore (String storeCode) {
+	    	session.insert(namespaceStore+"deleteStore", storeCode);
+	    }
+	    
+	    public StoreDTO updateSellerStore(String storeCode) {
+	    	return session.selectOne(namespaceStore+"updateSellerStore",storeCode);
+	    }
+	    
+	    public void updateStore (StoreDTO store) {
+	    	session.insert(namespaceStore+"updateStore", store);
+	    }
+	    
 	    
 
 

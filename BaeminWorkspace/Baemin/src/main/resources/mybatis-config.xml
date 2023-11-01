@@ -6,17 +6,5 @@
 	<typeAliases>
 		<typeAlias alias="StoreDTO"
 			type="com.acorn.baemin.domain.StoreDTO" />
-		<typeAlias alias="UserDTO"
-			type="com.acorn.baemin.domain.UserDTO" />
-		<typeAlias alias="ZzimDTO"
-			type="com.acorn.baemin.domain.ZzimDTO" />
-		<typeAlias alias="OrderDTO"
-			type="com.acorn.baemin.domain.OrderDTO" />
-		<typeAlias alias="CartDTO"
-			type="com.acorn.baemin.domain.CartDTO" />
-		<typeAlias alias="CartDTOTest"
-			type="com.acorn.baemin.cart.domain.CartDTO" />
-		<typeAlias alias="StoreDTODTOTest"
-			type="com.acorn.baemin.cart.domain.StoreDTO" />
 	</typeAliases>
 </configuration>

@@ -24,5 +24,32 @@
 		VALUES 
 		(#{sellerCode}, #{storeName}, #{storeCategory}, #{storeImage}, #{storeAddress}, #{storePhone}, #{minOrderPrice}, #{deliveryFee}, #{deliveryArea})
 	</insert>
+	
+	<delete id="deleteStore" parameterType="String"> 
+        DELETE FROM store_tbl WHERE storeCode = #{storeCode} 
+    </delete >   
+    
+   	<select id="updateSellerStore" resultType="StoreDTO" parameterType="String">
+		SELECT *
+		FROM store_tbl
+		where storeCode = #{storeCode}
+	</select>
+	
+    <update id="updateStore" parameterType="StoreDTO">
+	    UPDATE store_tbl
+	    SET
+	        storeName = #{storeName},
+	        storeCategory = #{storeCategory},
+	        storeImage = #{storeImage},
+	        storeAddress = #{storeAddress},
+	        storePhone = #{storePhone},
+	        minOrderPrice = #{minOrderPrice},
+	        deliveryFee = #{deliveryFee},
+	        deliveryArea = #{deliveryArea}
+	    WHERE
+	        storeCode = #{storeCode}
+	</update>
+     
+	
 
 </mapper>
