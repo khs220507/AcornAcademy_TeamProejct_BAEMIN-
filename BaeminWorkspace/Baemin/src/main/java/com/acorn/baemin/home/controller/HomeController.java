@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.acorn.baemin.cart.service.CartServiceImp;
+import com.acorn.baemin.cart.service.CartService;
 import com.acorn.baemin.domain.CartDTO;
 import com.acorn.baemin.domain.OrderDTO;
 import com.acorn.baemin.domain.ZzimDTO;
@@ -49,7 +49,6 @@ public class HomeController {
 		return "home/zzim_list";
 	}
 	
-	
 	// 주문내역
 	@GetMapping("/orderList")
 	public String orderList(Model model) {
@@ -66,10 +65,4 @@ public class HomeController {
 		}
 		return "home/order_list";
 	}
-
-	
-	
-	
-	
-	
 }

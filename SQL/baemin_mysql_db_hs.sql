@@ -16,7 +16,7 @@ create table user_tbl(
 ) auto_increment=10001;
 
 INSERT INTO user_tbl (userId, userPw, userName, userNickname, userPhone, userAddress, userEmail, userBirth, userGender, userStatus) VALUES
-('user123', 'password123', 'John Doe', 'johndoe', '555-123-4567', '123 Main St, City, Country', 'john.doe@email.com', '1990-05-15', 0, 1),
+('user123', 'user1', 'John Doe', 'johndoe', '555-123-4567', '123 Main St, City, Country', 'john.doe@email.com', '1990-05-15', 0, 1),
 ('jane456', 'secret456', 'Jane Smith', 'janesmith', '555-987-6543', '456 Elm St, Town, Country', 'jane.smith@email.com', '1985-08-20', 1, 1),
 ('bob789', 'bobspw789', 'Bob Johnson', 'bobjohnson', '555-555-1234', '789 Oak St, Village, Country', 'bob.johnson@email.com', '1995-02-10', 0, 1),
 ('alice555', 'secure555', 'Alice Brown', 'alicebrown', '555-222-3333', '555 Pine St, County, Country', 'alice.brown@email.com', '1988-11-30', 1, 1),
@@ -74,11 +74,11 @@ CREATE TABLE store_tbl (
 ) auto_increment = 30001;
 
 INSERT INTO store_tbl (sellerCode, storeName, storeCategory, storeImage, storeAddress, storePhone, zzimCount, reviewCount, storeRating, storeDescription, minOrderPrice, deliveryFee, operatingTime, deliveryArea, storeStatus) VALUES
-(20001, 'Delicious Pizza', 'Pizza', 'https://example.com/pizza.jpg', '123 Main St, City, Country', '555-111-2222', 50, 25, 4.5, 'Welcome to Delicious Pizza! We serve the best pizzas in town.', 15, 2, '10:00 AM - 10:00 PM', 'City Area', 1),
-(20002, 'Sushi Palace', 'Sushi', 'https://example.com/sushi.jpg', '456 Elm St, Town, Country', '555-222-3333', 40, 18, 4.2, 'Experience the finest sushi at Sushi Palace.', 20, 3, '11:30 AM - 9:30 PM', 'Town Area', 1),
-(20003, 'Burger Haven', 'Burgers', 'https://example.com/burgers.jpg', '789 Oak St, Village, Country', '555-333-4444', 35, 15, 4.0, 'Home of the juiciest burgers in the village!', 12, 2, '11:00 AM - 10:00 PM', 'Village Area', 1),
-(20004, 'Tasty Tacos', 'Mexican', 'https://example.com/tacos.jpg', '555 Pine St, County, Country', '555-444-5555', 28, 12, 4.1, 'Savor the flavors of Mexico with our delicious tacos.', 18, 2, '12:00 PM - 9:00 PM', 'County Area', 1),
-(20005, 'Asian Delights', 'Asian', 'https://example.com/asian.jpg', '777 Cedar St, Town, Country', '555-555-6666', 42, 20, 4.3, 'Explore the diverse flavors of Asia at our restaurant.', 25, 3, '10:30 AM - 10:00 PM', 'Town Area', 1);
+(20001, 'Delicious Pizza', 'Pizza', 'korea', '123 Main St, City, Country', '555-111-2222', 50, 25, 4.5, 'Welcome to Delicious Pizza! We serve the best pizzas in town.', 15, 2, '10:00 AM - 10:00 PM', 'City Area', 1),
+(20002, 'Sushi Palace', 'Sushi', 'japan', '456 Elm St, Town, Country', '555-222-3333', 40, 18, 4.2, 'Experience the finest sushi at Sushi Palace.', 20, 3, '11:30 AM - 9:30 PM', 'Town Area', 1),
+(20003, 'Burger Haven', 'Burgers', 'korea', '789 Oak St, Village, Country', '555-333-4444', 35, 15, 4.0, 'Home of the juiciest burgers in the village!', 12, 2, '11:00 AM - 10:00 PM', 'Village Area', 1),
+(20004, 'Tasty Tacos', 'Mexican', 'japan', '555 Pine St, County, Country', '555-444-5555', 28, 12, 4.1, 'Savor the flavors of Mexico with our delicious tacos.', 18, 2, '12:00 PM - 9:00 PM', 'County Area', 1),
+(20005, 'Asian Delights', 'Asian', 'pasta', '777 Cedar St, Town, Country', '555-555-6666', 42, 20, 4.3, 'Explore the diverse flavors of Asia at our restaurant.', 25, 3, '10:30 AM - 10:00 PM', 'Town Area', 1);
 
 INSERT INTO store_tbl
 		(sellerCode, storeName, storeCategory, storeImage, storeAddress, storePhone, minOrderPrice, deliveryFee, deliveryArea)
@@ -87,6 +87,8 @@ INSERT INTO store_tbl
 ALTER TABLE store_tbl
 MODIFY operatingTime VARCHAR(50),
 MODIFY storeStatus TINYINT default 0;
+
+
 
 
 
@@ -103,11 +105,11 @@ CREATE TABLE menu_tbl (
 ) auto_increment = 40001;
 
 INSERT INTO menu_tbl (menuName, menuPrice, menuImage, menuContent, menuClassification, menuStatus) VALUES
-('Margherita Pizza', 10, 'pizza_margherita.jpg', 'Classic pizza with tomato, mozzarella, and basil.', 'Pizza', 0),
-('Sushi Combo', 20, 'sushi_combo.jpg', 'A combination of fresh sushi rolls and sashimi.', 'Sushi', 0),
-('Bacon Cheeseburger', 8, 'bacon_cheeseburger.jpg', 'Juicy burger with bacon and melted cheese.', 'Burgers', 0),
-('Taco Platter', 12, 'taco_platter.jpg', 'A platter of assorted tacos with your choice of fillings.', 'Mexican', 0),
-('Pad Thai', 15, 'pad_thai.jpg', 'A classic Thai dish with stir-fried noodles, shrimp, and vegetables.', 'Asian', 0);
+('Margherita Pizza', 10, 'food', 'Classic pizza with tomato, mozzarella, and basil.', 'Pizza', 0),
+('Sushi Combo', 20, 'food', 'A combination of fresh sushi rolls and sashimi.', 'Sushi', 0),
+('Bacon Cheeseburger', 8, 'food', 'Juicy burger with bacon and melted cheese.', 'Burgers', 0),
+('Taco Platter', 12, 'food', 'A platter of assorted tacos with your choice of fillings.', 'Mexican', 0),
+('Pad Thai', 15, 'food', 'A classic Thai dish with stir-fried noodles, shrimp, and vegetables.', 'Asian', 0);
 
 
 
@@ -136,20 +138,28 @@ INSERT INTO option_tbl (menuCode, optionCategory, optionSelectType, optionName, 
 -- 06. 장바구니 cart_tbl 테이블 생성
 create table cart_tbl (
     cartCode int auto_increment primary key,
-    userId varchar(20) not null,
+    userId varchar(30),
     storeCode int,
     menuCode int,
-    menuCount int
+    optionCode int,
+    menuCount int,
+    cartPrice int,
+    optionStatus tinyint,
+    foreign key  (storeCode) references store_tbl(storeCode),
+    foreign key  (menuCode) references menu_tbl(menuCode),
+    foreign key  (optionCode) references option_tbl(optionCode)
 )auto_increment = 60001;
 
+INSERT INTO cart_tbl (userId, storeCode, menuCode, optionCode, menuCount, cartPrice, optionStatus) VALUES
+('user1', 30001, 40001, 50001, 2, 20, 0),
+('user1', 30002, 40002, 50001, 1, 12, 0),
+('user1', 30003, 40003, 50001, 3, 30, 0),
+('alice555', 30004, 40004, 50001, 2, 16, 0),
+('sam777', 30005, 40005, 50001, 1, 15, 0);
 
-CREATE TABLE cart_tbl (
-    cartCode INT,
-    userId VARCHAR(255),
-    storeCode INT,
-    menuCount INT,
-    menuCode INT
-);
+
+
+
 
 
 
@@ -282,13 +292,5 @@ DROP TABLE seller_tbl;
 DROP TABLE user_tbl;
 
 
-SHOW TABLES;
 
 
-SELECT * FROM cart_tbl c
-LEFT OUTER JOIN order_tbl s ON c.storeCode = s.storeCode
-UNION
-SELECT * FROM cart_tbl c
-RIGHT OUTER JOIN order_tbl s ON c.storeCode = s.storeCode;
-
-COMMIT;

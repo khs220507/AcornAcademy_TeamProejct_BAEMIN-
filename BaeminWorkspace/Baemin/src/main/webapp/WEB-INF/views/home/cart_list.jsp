@@ -30,6 +30,13 @@ section {
 	
 }
 
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+
 footer {
 	
 }
@@ -82,6 +89,11 @@ ul, li {
 	width: 100px;
 }
 
+.section-cart-store-img {
+	width : 64px;
+	border: 1px solid black;
+}
+
 .section-cart-menuname-wrap {
 	display: flex;
 }
@@ -96,7 +108,7 @@ ul, li {
 }
 
 .section-cart-menuinfo-img {
-	width: 125px;
+	width: 100px;
 }
 
 .section-cart-change-number-wrap {
@@ -136,11 +148,18 @@ ul, li {
 
 <body>
 
+	<c:set var="storeList" value="${cartMap.storeList}" />
+	<c:set var="cartList" value="${cartMap.cartList}" />
+	<c:set var="menuList" value="${cartMap.menuList}" />
+	
+
 	<header>
 		<div class="headerwrap">해더</div>
 	</header>
 
 	<section>
+
+
 
 
 		<div class="section-cart-box">
@@ -151,56 +170,74 @@ ul, li {
 
 			</div>
 
-			<c:forEach items="${list}" var="item">
-
+			<c:forEach var="item" items="${cartMap.cartList}" varStatus="cnt">
+			
+			<c:set var="storeName" value="${storeList[cnt.count-1].storeName}"></c:set>
+			<c:set var="storeImage" value="${storeList[cnt.count-1].storeImage}"></c:set>
+			<c:set var="menuName" value="${menuList[cnt.count-1].menuName}"></c:set>
+			<c:set var="menuImage" value="${menuList[cnt.count-1].menuImage}"></c:set>
+			<c:set var="menuContent" value="${menuList[cnt.count-1].menuContent}"></c:set>
+			
 				<div class="section-cart-inner">
 
 					<div class="section-cart-storeinfo">
-						<img class="section-cart-storeinfo-img" src=""><span>${item}</span>
-			
-		</div>
 
-		<div>
-			<div class="section-cart-menuname">
-				${item.menuName}<img src="">
-			</div>
+						<img class="section-cart-store-img" src="${pageContext.request.contextPath}/resources/images/${storeImage}.jpg" alt="Image Description">
+						<span>${storeName}</span>
 
-			<div class="section-cart-menuinfo-wrap">
-				<div>
-					<img class="section-cart-menuinfo-img" src="">
-				</div>
-				<div>
-					<ul>
-						<li>a</li>
-					</ul>
-				</div>
-			</div>
+					</div>
 
-
-			<div class="section-cart-change-number-wrap">
-				<div class="section-cart-change-number-input">
-					<span> - </span> <input type="text" placeholder=" 1 "
-						style="width: 20px;"> <span> + </span>
-				</div>
+			<div>
 				
-				</c:forEach>
-				<div class="section-cart-orderprice">
-					<span>주문금액:26000</span>
+					<div class="section-cart-menuname">
+						<span>${menuName}</span>
+						<img src="">
+					</div>
+
+					<div class="section-cart-menuinfo-wrap">
+						<div>
+							<img class="section-cart-menuinfo-img" src="${pageContext.request.contextPath}/resources/images/${menuImage}.png" alt="Image Description"">
+						</div>
+						<div>
+							<ul>
+								<li>${menuContent}</li>
+							</ul>
+						</div>
+					</div>
+				
+
+				<div class="section-cart-change-number-wrap">
+					<div class="section-cart-change-number-input">
+						<span> - </span> <input type="text" placeholder=" 1 "
+							style="width: 20px;"> <span> + </span>
+					</div>
+					
+					</c:forEach>
+
+
+
+
+
+					<div class="section-cart-orderprice">
+						<span>주문금액:26000</span>
+					</div>
 				</div>
+
+
+
+
+
+
+
+
 			</div>
-
-
-
-
-
-		</div>
-		<div class="section-cart-totalprice-wrap">
-			<div class="section-cart-totalprice-title">총 주문금액</div>
-			<div class="section-cart-totalprice">26000원</div>
-		</div>
-		<div class="section-cart-order-button">
-			<button>주문하기</button>
-		</div>
+			<div class="section-cart-totalprice-wrap">
+				<div class="section-cart-totalprice-title">총 주문금액</div>
+				<div class="section-cart-totalprice">26000원</div>
+			</div>
+			<div class="section-cart-order-button">
+				<button>주문하기</button>
+			</div>
 		</div>
 		</div>
 
