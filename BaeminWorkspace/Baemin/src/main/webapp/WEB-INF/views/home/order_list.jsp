@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    
+    <c:set  var="path" value="<%=request.getContextPath() %>"></c:set>
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,6 +69,9 @@
           margin-left: 5px;
           margin-right: 5px;
         }
+        .order-num{
+        	display:none;
+        }
         /**/
         .wrap-center{
           display: flex;
@@ -110,7 +115,7 @@
           color: #48D1CC;
           border: 2px solid #48D1CC;
           border-radius: 5px;
-          margin: 5px;
+          margin-bottom: 20px;
         }
 
       </style>
@@ -134,6 +139,7 @@
         <p>${orderList.orderDate }</p>
         <p class="dot">·</p>
         <p>${orderList.orderStatus}</p>
+        <span class="order-num">${orderList.orderNumber }</span>
       </div>
 
   
@@ -154,18 +160,44 @@
         </div>
       </div>
       <button class="add-menu-btn"><strong>같은 메뉴 담기</strong></button>
+       <hr>
     </div>
-
-    <hr>
       
     </c:forEach>
-
-
 
       
       </section>
 
  	<jsp:include page="../base/footer.jsp"/>
+
+	<script>
+	
+	// 주문내역 삭제
+	$(document).on('click', '.delete-icon', function() {
+		$(this).closest('.orderList-wrap').remove();
+		let orderNumber = $(this).closest('.orderList-wrap').find('.order-num').text().trim();
+	
+		deleteList(orderNumber);
+	});
+
+	function deleteList(orderNumber) {
+		
+		$.ajax({
+			type : "get",
+			url : "${path}/orderListDelete",
+			data : "orderNumber=" + orderNumber,
+			dataType : "text",
+			success : function(data) {
+				
+			},
+			error : function(err) {
+				alert("삭제 요청에 실패했습니다.");
+				alert(orderNumber);
+			}
+		});
+	}
+	
+	</script>
 
 </body>
 </html>

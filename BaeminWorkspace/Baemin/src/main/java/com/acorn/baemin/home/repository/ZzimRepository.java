@@ -22,15 +22,14 @@ public class ZzimRepository implements InterZzimRepository{
     	System.out.println("zzimList show");
         return session.selectList(namespace+"zzimSelectAll",userCode);
     }
+
+	@Override
+	public int zzimDelete(int userCode, int storeCode) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
     
 
-    public int zzimDelete( int userCode, int storeCode) throws Exception {
-    	
-    	ZzimDTO zzimDTO = new ZzimDTO();
-    	zzimDTO.setUserCode(userCode);
-        zzimDTO.setStoreCode(storeCode);
-        
-        return session.delete(namespace+"zzimDelete", zzimDTO);
-    } 
+ 
 	
 }
