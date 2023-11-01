@@ -27,6 +27,14 @@
     	SELECT *
         FROM order_tbl
         WHERE userCode = #{userCode}
+        ORDER BY orderDate DESC, orderNumber DESC
+    </select>
+    
+    	<!-- 주문내역 삭제 -->
+    <select id="orderDelete" resultType="OrderDTO" parameterType="int">
+    	Delete 
+        FROM order_tbl
+        WHERE orderNumber = #{orderNumber}
     </select>
     
     

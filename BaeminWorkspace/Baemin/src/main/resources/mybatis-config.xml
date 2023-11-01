@@ -16,10 +16,9 @@
 			type="com.acorn.baemin.domain.CartDTO" />
 			
 			<typeAlias alias="CartDTOTest"
-			type="com.acorn.baemin.cart.domain.CartDTO" />
-			<typeAlias alias="StoreDTODTOTest"
-			type="com.acorn.baemin.cart.domain.StoreDTO" />
-			
+			type="com.acorn.baemin.cart.domain.CartDTOTest" />
+			<typeAlias alias="StoreDTOTest"
+			type="com.acorn.baemin.cart.domain.StoreDTOTest" />
 
 	</typeAliases>
 </configuration>
