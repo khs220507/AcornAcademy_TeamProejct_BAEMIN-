@@ -7,6 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+<<<<<<< HEAD
+=======
+import com.acorn.baemin.cart.service.CartService;
+import com.acorn.baemin.domain.CartDTO;
+>>>>>>> 8416371312e14392ffb68630d7f888caf724e6e7
 import com.acorn.baemin.domain.OrderDTO;
 import com.acorn.baemin.domain.ZzimDTO;
 
@@ -50,7 +55,11 @@ public class HomeController {
 	}
 	//////////////////////////////////////////////////////////////////////////
 	
+<<<<<<< HEAD
 	// 주문내역 조회
+=======
+	// 주문내역
+>>>>>>> 8416371312e14392ffb68630d7f888caf724e6e7
 	@GetMapping("/orderList")
 	public String orderList(Model model) {
 		List<OrderDTO> result;
@@ -66,6 +75,7 @@ public class HomeController {
 		}
 		return "home/order_list";
 	}
+<<<<<<< HEAD
 
 
 	// 주문내역 삭제
@@ -86,4 +96,6 @@ public class HomeController {
 	
 	
 	
+=======
+>>>>>>> 8416371312e14392ffb68630d7f888caf724e6e7
 }
